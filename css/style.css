@@ -1,0 +1,256 @@
+html{
+    scroll-behavior: smooth;
+}
+
+#bodyElement {
+    font-family: sans-serif;
+}
+
+.lightMode{
+    background-color:white;
+    color:#111111;
+}
+
+.darkMode{
+    background-color:#111111;
+    color: #b1b1b1;
+}
+
+.darkMode .blueHue{
+    background-color: skyblue;
+    color: cornflowerblue;
+}
+
+.lightMode .blueHue{
+    background-color: cornflowerblue;
+    color: skyblue;
+}
+
+.alphaHue{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.roundedFull{
+    border-radius: 10px;
+}
+
+.roundedTop{
+    border-radius: 10px 10px 0px 0px;
+}
+
+.roundedBottom{
+    border-radius: 0px 0px 10px 10px;
+}
+
+#aboutPage, #homePage, #contactPage{
+    min-height: 200px;
+}
+
+.section{
+    padding: 20px;
+    width: auto;
+}
+
+#navigationMenu{
+    display: flex;
+    justify-content: space-between;
+}
+
+#navigationMenu ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+}
+
+#navigationMenu ul button{
+    min-width: 100px;
+    min-height: 30px;
+    /* border: 2px solid plum; */
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+#colorModeSwitch, #colorModeSwitchBurger{
+    width: 48px!important;
+    height: 48px!important;
+    /* border: 2px solid plum; */
+    text-align: center;
+}
+
+#colorModeSwitch{
+    float: left;
+}
+
+#colorModeSwitch img, #colorModeSwitchBurger img{
+    width: 24px;
+    height: 24px;
+}
+
+#burgerMenuButton{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 15px;
+}
+
+#burgerNavigationMenu{
+    background-color:rgba(0, 0, 0, 0.7);
+    border-radius: 0px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 15px;
+}
+
+#burgerNavigationMenu ul{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    padding: 0;
+}
+
+
+#burgerNavigationMenu ul button{
+    min-width: 128px;
+    min-height: 32px;
+    margin: 5px 0px;
+}
+
+#colorModeSwitchBurger{
+    margin-right: 0px;
+}
+
+#backToTopContainer{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+#backToTopButton{
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+
+.gridContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content:stretch;
+}
+
+.gridItem{
+    min-width: 100px;
+    min-height: 200px;
+    max-width: 600px;
+    max-height: 1200px;
+    width: 90vw;
+    height: 185vw;
+}
+
+.gridItem div{
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 600px;
+    max-height: 600px;
+    height: 90vw;
+    overflow: scroll;
+}
+
+.gridItem div p{
+    font-size: 16px;
+    margin: 0;
+    padding: 10px;
+}
+
+@media only screen and (min-width:300px){ /*at 500px or wider*/
+    
+    .gridItem div p{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width:600px){ /*at 600px or wider*/
+
+    .gridContainer{
+        grid-template-columns: auto auto;
+    }
+
+    .gridItem{
+        width: 45vw;
+        height: 92.5vw;
+    }
+
+    .gridItem div{
+        height: 45vw;
+    }
+    
+    .gridItem div p{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width:900px){ /*at 900px or wider*/
+    #aboutContentsContainer{
+        width: 80%;
+    }
+    
+    #skillsetContentsContainer{
+        width: 80%;
+    }
+
+    .gridContainer{
+        grid-template-columns: auto auto auto;
+    }
+
+    .gridItem{
+        width: 31vw;
+        height: 63.5vw;
+    }
+
+    .gridItem div{
+        height: 31vw;
+    }
+
+    .gridItem div p{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width:1200px){ /*at 1200px or wider*/
+    .gridItem div p{
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width:1200px){ /*at 1200px or wider*/
+    .gridItem div p{
+        font-size: 24px;
+    }
+}
+
+.scaledImage{
+    width: -moz-available;
+    padding: 16px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.gridItem div p{
+    padding: 24px;
+}

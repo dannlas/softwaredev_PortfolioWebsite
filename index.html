@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DL Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body class="darkMode" id="bodyElement">
+    <div>
+        <section id="navigationContainer" class="section">
+            <h1 id="mainTitle">Daniel L. - Software Developer</h1>
+            <!--<p>Return to <a href="./index.html">home page</a>.</p>-->
+            <div id="mainNavigationContainer">
+                <nav id="navigationMenu" class="visible">
+                    <button id="colorModeSwitch" class="blueHue roundedFull" onclick="switchMode(this.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute('class'))">
+                        <img class="colorModeImage" src="img/darkMode.png">
+                    </button>
+                    <ul id="navigationMenuContents">
+                        <button class="blueHue roundedFull" onclick='location.href="#homePage"'>Home</button>
+                        <button class="blueHue roundedFull" onclick='location.href="#aboutPage"'>About</button>
+                        <button class="blueHue roundedFull" onclick='location.href="#contactPage"'>Contact</button>
+                    </ul>
+                </nav>
+            </div>
+            <div id="backToTopContainer">
+                <button id="backToTopButton" class="blueHue roundedFull" onclick="location.href='#html'">^</button>
+            </div>
+            <div id="burgerNavigationContainer">
+                <nav id="burgerNavigationMenu" class="hidden">
+                    <button id="colorModeSwitchBurger" class="blueHue roundedFull" onclick="switchMode(this.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute('class'))">
+                        <img class="colorModeImage" src="img/darkMode.png">
+                    </button>
+                    <ul id="burgerNavigationMenuContents">
+                        <button class="blueHue roundedFull" onclick='location.href="#homePage"'>Home</button>
+                        <button class="blueHue roundedFull" onclick='location.href="#aboutPage"'>About</button>
+                        <button class="blueHue roundedFull" onclick='location.href="#contactPage"'>Contact</button>
+                    </ul>
+                </nav>
+                <button id="burgerMenuButton" class="blueHue roundedFull hidden" onclick="enableBurgerNavigationMenu()" style="width: 48px; height: 48px;"></button>
+            </div>
+        </section>
+        <section id="aboutPage" class="section">
+            <div id="aboutContentsContainer">
+                <h2>About Me</h2>
+                <p>I am a university graduate in Games Development and have been seeking out a position within a programming related role. 
+                I have previously taken on the opportunity to work as an entry-level full-stack Web Developer alongside the early years of my studies. 
+                More recently I have been trying to branch out to the Software Development. 
+                My portfolio is a real example of my versatility in programming for many different types of roles.</p>
+            </div>
+            <div id="skillsetContentsContainer">
+                <h2>Skillset</h2>
+                <ul>
+                    <li>Experience with multiple programming languages, including HTML, CSS, Javascript/jQuery, PHP, Python, C++, C# and more.</li>
+                    <li>Great knowledge of software development workflow.</li>
+                    <li>Aptitude in a variety of software tools including VS Code, Tortoise SVN, Git and others.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="homePage" class="section">
+            <div id="projectsContentsContainer">
+                <h2>Projects</h2>
+                <div>
+                    <div id="projects" class="gridContainer">
+                        <div class="gridItem">
+                            <div class="blueHue roundedTop">
+                                <a target="_blank" href="https://github.com/dannlas/softwaredev_PortfolioWebsite">
+                                    <img class="scaledImage" src="img/img_portfolioSite.png">
+                                </a>
+                            </div>
+                            <div class="alphaHue">
+                                <p>This portfolio website was created using HTML, CSS and Javascript and links to my web applications as well as provides some information about me, my experience and contact details. Most other projects take use of at least HTML and CSS where necessary.</p>
+                            </div>
+                        </div>
+                        <div class="gridItem">
+                            <div class="blueHue roundedTop">
+                                <a target="_blank" href="https://github.com/dannlas/javascript_numberDecypherProject">
+                                    <img class="scaledImage" src="img/img_numberDecipherProject.png">
+                                </a>
+                            </div>
+                            <div class="alphaHue roundedBottom">
+                                <p>My number decipher project uses Javscript to extract a number from a text describing the number in words. Text doesn't necessarily have to be perfect as spaces and other text noise is accounted for. <br><br>The converted result is both a clean version of the text as well as the number as an integer digit. Colour-coding can be turned on to more clearly see how the result is organised.</p>
+                            </div>
+                        </div>
+                        <div class="gridItem">
+                            <div class="blueHue roundedTop">
+                                <a target="_blank" href="https://github.com/dannlas/javascript_panelBuilderProject">
+                                    <img class="scaledImage" src="img/img_panelBuilderProject.png">
+                                </a>
+                            </div>
+                            <div class="alphaHue roundedBottom">
+                                <p>Another project I created with Javascript functionality is my panel builder project. The idea behind it is to allow you to add, edit, remove and move elements as well as panels themselves which contain the elements. <br><br>This project is a work in progress and more experimental of what can be achieved with Javascript. Making this project made me realise I had been creating something akin to that of a website builder.</p>
+                            </div>
+                        </div>
+                        <div class="gridItem">
+                            <div class="blueHue roundedTop">
+                                <a target="_blank" href="https://github.com/dannlas/python_gridPathfindingProject">
+                                    <img class="scaledImage" src="img/img_gridPathfindProject.png">
+                                </a>
+                            </div>
+                            <div class="alphaHue roundedBottom">
+                                <p>The most technically complex project I have created so far is my pathding algorithm project, which I made using Python to handle the computational logic. In addition, I used PyScript for interpreting the code and making sure it could run as a web application. <br><br>The grid can be customised by clicking on a cell. Each cell will either be blocked "I", traversible "O", starting point "S" or end point "X". Pressing the find button will display the route the algorithm has taken to get from the start to the end point. If a path is unavailable, the algorithm will search available area from the start point until it determines that no route to the end point is possible. NOTE: the outer cells are set as walls for the algorithm to not treat the gaps as a wrap-around route due to the way the cell generation is integrated.</p>
+                            </div>
+                        </div>
+                        <div class="gridItem">
+                            <div class="blueHue roundedTop">
+                                <a target="_blank" href="https://github.com/dannlas/SQLgridentrytable">
+                                    <img class="scaledImage" src="img/img_SQLgridTables.png">
+                                </a>
+                            </div>
+                            <div class="alphaHue roundedBottom">
+                                <p>For my SQL project, I created a file for setting up a database as well as the tables and examples of retreiving data from them. The table information stored is a addendum stretch goal to my Python pathfinding algorithm for retrieving grid cells stored as strings so that they could later be loaded into the grid layout.</p>
+                            </div>
+                        </div>
+                        <!-- <div class="gridItem">
+                            <div class="blueHue roundedTop"></div>
+                            <div class="alphaHue roundedBottom"></div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contactPage" class="section">
+            <div id="contactFormContainer">
+                <h2>Contact</h2>
+                <p>Email to: </p><a href="daniellasmanis.bootcamp@justit.co.uk">daniellasmanis.bootcamp@justit.co.uk</a>
+                <p>Phone to: 0123456789</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
